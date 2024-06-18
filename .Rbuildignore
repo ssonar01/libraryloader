@@ -1,2 +1,5 @@
 ^libraryloader\.Rproj$
 ^\.Rproj\.user$
+^\.gitlab-ci\.yml$
+^\.github$
+^LICENSE\.md$

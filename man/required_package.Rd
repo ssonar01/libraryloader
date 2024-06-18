@@ -7,7 +7,7 @@
 required_package(x)
 }
 \arguments{
-\item{package_list}{A list of package names necessary for functional loading}
+\item{x}{A vector of package names necessary for functional loading}
 }
 \description{
 Prepare libraries for loading

@@ -1,12 +1,12 @@
 Package: libraryloader
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: Loading multiple libraries in single call
+Version: 0.0.1.0
 Authors@R: 
-    person("Sankalp", "Sonar", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    person("Sankalp", "Sonar", , "sonarsankalp@example.com", role = c("aut", "cre"),
+           comment = c(ORCID = "NA"))
+Description: Package is intended to load a list of libraries that would require installing and loading individually.
+    This package provides a convenient function, `required_package`, to manage the installation and loading of multiple packages at once.
+License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.1
@@ -15,3 +15,6 @@ BugReports: https://github.com/ssonar01/libraryloader/issues
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+Imports:
+  glue (>= 1.7.0),
+  utils (>= 4.4.1)
