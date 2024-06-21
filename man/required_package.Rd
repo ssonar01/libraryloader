@@ -4,10 +4,10 @@
 \alias{required_package}
 \title{Prepare libraries for loading}
 \usage{
-required_package(x)
+required_package(pkgs)
 }
 \arguments{
-\item{x}{A vector of package names necessary for functional loading}
+\item{pkgs}{A vector of package names necessary for functional loading}
 }
 \description{
 Prepare libraries for loading
