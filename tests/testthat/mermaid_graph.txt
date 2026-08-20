@@ -1,0 +1,22 @@
+flowchart TB 
+    subgraph P["Upstream provenance plane"]
+        S["Source data"] --> G["Ingestion gate<br/>classify • license • quarantine"]
+        G --> C["Normalize • chunk • hash • sign"]
+        C --> V[("Encrypted WORM<br/>evidence vault")]
+        C --> L[("Append-only Merkle<br/>provenance ledger")]
+        C --> X[("Vector index /<br/>training manifest")]
+    end
+    
+    subgraph R["Runtime control plane"]
+        U["User or system event"] --> A["Agent gateway<br/>model + retrieval"]
+        X --> A
+        A --> T["Policy and tool broker"]
+        T --> E["Enterprise APIs"]
+        A --> B["AI black-box recorder"]
+        T --> B
+        E --> B
+    end 
+    
+    B --> V
+    B --> L
+    L -. "Verify receipt and source" .-> B
