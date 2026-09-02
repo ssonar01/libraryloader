@@ -20,3 +20,67 @@ flowchart TB
     B --> V
     B --> L
     L -. "Verify receipt and source" .-> B
+
+{
+  "Customer": {
+    "customerId": "string",
+    "legalName": {
+      "firstName": "string",
+      "lastName": "string"
+    },
+    "email": "string",
+    "dateOfBirth": "YYYY-MM-DD"
+  },
+  "OnboardingApplication": {
+    "applicationId": "string",
+    "customerId": "string",
+    "status": "string",
+    "selectedIdentityDocumentId": "string",
+    "financialProfileId": "string",
+    "requestedAccountType": "string",
+    "createdAccountId": null,
+    "createdAt": "YYYY-MM-DDTHH:mm:ssZ",
+    "updatedAt": "YYYY-MM-DDTHH:mm:ssZ"
+  },
+  "IdentityDocument": {
+    "identityDocumentId": "string",
+    "customerId": "string",
+    "documentType": "string",
+    "documentNumber": "string",
+    "issuingCountry": "string",
+    "expiryDate": "YYYY-MM-DD",
+    "verificationStatus": "string"
+  },
+  "FinancialProfile": {
+    "financialProfileId": "string",
+    "applicationId": "string",
+    "employmentStatus": "string",
+    "annualIncome": null,
+    "monthlyExpenses": {
+      "amount": 0.00,
+      "currency": "USD"
+    },
+    "existingDebt": {
+      "amount": 0.00,
+      "currency": "USD"
+    },
+    "effectiveAt": "YYYY-MM-DDTHH:mm:ssZ"
+  },
+  "RiskAssessment": {
+    "riskAssessmentId": "string",
+    "applicationId": "string",
+    "outcome": "string",
+    "reasonCodes": [
+      "string"
+    ],
+    "assessedAt": "YYYY-MM-DDTHH:mm:ssZ",
+    "rulesetVersion": "string"
+  },
+  "Account": {
+    "accountId": "string",
+    "customerId": "string",
+    "accountType": "string",
+    "status": "string",
+    "openedAt": "YYYY-MM-DDTHH:mm:ssZ"
+  }
+}
